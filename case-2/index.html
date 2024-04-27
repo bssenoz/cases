@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(232, 240, 242);
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        text-align: center;
+        background-color: rgb(208, 231, 236);
+        padding: 2rem;
+        border: 1px solid rgb(208, 231, 236);
+        border-radius: 2px;;
+    }
+
+    .question-container {
+        margin-bottom: 20px;
+    }
+
+    .choices {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .choices li {
+        margin-bottom: 10px;
+    }
+
+    .choices li button {
+        padding: 10px 20px;
+        background-color: #bec1c5;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .timer {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .question-number {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="question-number" id="question-number"></div>
+        <div class="question-container">
+            <h1 id="question"></h1>
+            <ul id="choices" class="choices">
+                <li><button id="choice-A" class="choice-btn"></button></li>
+                <li><button id="choice-B" class="choice-btn"></button></li>
+                <li><button id="choice-C" class="choice-btn"></button></li>
+                <li><button id="choice-D" class="choice-btn"></button></li>
+            </ul>
+        </div>
+        <div id="timer" class="timer">Süre: 30s</div>
+        <button id="next-btn" class="btn hidden">Next</button>
+        <table id="answers" class="hidden">
+            <thead>
+                <tr>
+                    <th>Soru</th>
+                    <th>Cevap</th>
+                    <th>Doğru Cevap</th>
+                </tr>
+            </thead>
+            <tbody id="answers-body">
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
